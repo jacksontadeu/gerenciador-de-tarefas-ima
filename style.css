@@ -1,14 +1,11 @@
-* {
-    box-sizing: border-box;
-   
-}
+
 .container {
     display: flex;
-    padding-right: 20px;
+    width: 100%;
     justify-content: space-around;
-    padding: 40px;
+    padding-top: 40px;
+   
 }
-
 .mb-3 {
     display: flex;
     flex-direction: column;
@@ -23,4 +20,36 @@
     height: 500px;
     width: 100%;
     border-radius: 25px;
+}
+.login input{
+   margin-top:5px;
+}
+.login button{
+    margin-top:5px;
+}
+/* css adicionar-tarefas */
+.container-conteudo{
+    display: flex;
+    justify-content: center;
+    
+}
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    
+}
+.container-fluid{
+    background-color: rgb(73, 73, 77);
+    color:white;
+    padding: 15px;
+}
+#data-inicio {
+    margin-left:30px;
+}
+#data-termino {
+    margin-left: 15px;
+}
+#hora-inicio, #hora-termino{
+    margin-left:20px;
+    margin-right:0;
 }

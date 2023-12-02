@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <title>Gerenciador de Tarefas</title>
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a >Gerenciador de Tarefas</a>
+        <a >Bom dia 77777 </a>
+      </div>
+    </nav>
+    <span class="container-conteudo">
+      <div class="conteudo">
+        <h2>Gerenciador de Tarefas</h2>
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control-sm"
+            id="exampleFormControlInput1"
+            placeholder="Tarefa"
+          />
+        </div>
+        <form class="form-inline form-control-sm">
+          <label >Início da Tarefa</label>
+          <input
+            type="date"
+            class="form-control-sm"
+            id="data-inicio"
+            placeholder="Data Início"
+            aria-label="Data Início"
+          />
+          <input
+            type="time"
+            class="form-control-sm"
+            id="hora-inicio"
+            placeholder="Hora Início"
+          />
+        </form>
+
+        <form class="form-inline form-control-sm">
+          <label >Término da Tarefa</label>
+          <input
+            type="date"
+            class="form-control-sm"
+            id="data-termino"
+            placeholder="Data Término"
+          />
+          <input
+            type="time"
+            class="form-control-sm"
+            id="hora-termino"
+            placeholder="Hora Término"
+          />
+        </form>
+        <div class="mb-3">
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            placeholder="Descrição"
+          ></textarea>
+        </div>
+        <button type="button" class="btn btn-primary">Criar Tarefa</button>
+      </div>
+    </span>
+  </body>
+</html>
