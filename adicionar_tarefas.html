@@ -21,65 +21,82 @@
   <body>
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
-        <a >Gerenciador de Tarefas</a>
+        <a>Gerenciador de Tarefas</a>
         <a id="conta-logada"> </a>
         <a onclick="logout()" id="logout">Logout</a>
       </div>
     </nav>
-    <span class="container-conteudo">
-      <div class="conteudo">
-        <h2>Gerenciador de Tarefas</h2>
-        <div class="mb-3">
-          <input
-            type="text"
-            class="form-control-sm"
-            id="exampleFormControlInput1"
-            placeholder="Tarefa"
-          />
-        </div>
-        <form class="form-inline form-control-sm">
-          <label >Início da Tarefa</label>
-          <input
-            type="date"
-            class="form-control-sm"
-            id="data-inicio"
-            placeholder="Data Início"
-            aria-label="Data Início"
-          />
-          <input
-            type="time"
-            class="form-control-sm"
-            id="hora-inicio"
-            placeholder="Hora Início"
-          />
-        </form>
+    <div class="container-adicionar">
+      <span class="container-conteudo">
+        <div class="conteudo">
+          <h2>Gerenciador de Tarefas</h2>
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control-sm"
+              id="tarefa"
+              placeholder="Tarefa"
+            />
+          </div>
+          <form class="form-inline form-control-sm">
+            <label>Início da Tarefa</label>
+            <input
+              type="date"
+              class="form-control-sm"
+              id="data-inicio"
+              placeholder="Data Início"
+              aria-label="Data Início"
+            />
+            <input
+              type="time"
+              class="form-control-sm"
+              id="hora-inicio"
+              placeholder="Hora Início"
+            />
+          </form>
 
-        <form class="form-inline form-control-sm">
-          <label >Término da Tarefa</label>
-          <input
-            type="date"
-            class="form-control-sm"
-            id="data-termino"
-            placeholder="Data Término"
-          />
-          <input
-            type="time"
-            class="form-control-sm"
-            id="hora-termino"
-            placeholder="Hora Término"
-          />
-        </form>
-        <div class="mb-3">
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-            placeholder="Descrição"
-          ></textarea>
+          <form class="form-inline form-control-sm">
+            <label>Término da Tarefa</label>
+            <input
+              type="date"
+              class="form-control-sm"
+              id="data-termino"
+              placeholder="Data Término"
+            />
+            <input
+              type="time"
+              class="form-control-sm"
+              id="hora-termino"
+              placeholder="Hora Término"
+            />
+          </form>
+          <div class="mb-3">
+            <textarea
+              class="form-control"
+              id="descricao"
+              rows="3"
+              placeholder="Descrição"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="cadastrarTarefas()">
+            Criar Tarefa
+          </button>
         </div>
-        <button type="submit" class="btn btn-primary" onclick="">Criar Tarefa</button>
+      </span>
+      <div class="container-table">
+        <table class="table">
+          <thead>
+            <th>Tarefa</th>
+            <th>Data Inicio</th>
+            <th>Hora Inicio</th>
+            <th>Data Término</th>
+            <th>Hora Término</th>
+            <th>Descriçao</th>
+            <th>Status</th>
+          </thead>
+        </table>
       </div>
-    </span>
+    </div>
     <script src="scripts.js"></script>
   </body>
 </html>

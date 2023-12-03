@@ -59,4 +59,9 @@
 #logout {
     cursor: pointer;
 }
-
+.container-adicionar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
