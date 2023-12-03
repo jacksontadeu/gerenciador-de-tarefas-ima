@@ -22,7 +22,8 @@
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <a >Gerenciador de Tarefas</a>
-        <a >Olá ${contaLogada}  </a>
+        <a id="conta-logada"> </a>
+        <a onclick="logout()" id="logout">Logout</a>
       </div>
     </nav>
     <span class="container-conteudo">
@@ -76,7 +77,7 @@
             placeholder="Descrição"
           ></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" onclick="teste()">Criar Tarefa</button>
+        <button type="submit" class="btn btn-primary" onclick="">Criar Tarefa</button>
       </div>
     </span>
     <script src="scripts.js"></script>

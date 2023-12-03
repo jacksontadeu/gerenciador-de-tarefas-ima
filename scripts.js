@@ -1,5 +1,4 @@
 
-var contaLogada= ''
 function logar(){
     var email = document.getElementById('login-email').value;
     var senha = document.getElementById('login-password').value;
@@ -18,16 +17,13 @@ function logar(){
     
     if(email == emailLogin && senha == senhaLogin){
         alert("Login com Sucesso")
-        teste()
+        localStorage.setItem('contaLogada', contaLogada)
         location.href='adicionar_tarefas.html'
     }else{
         alert("Login inválido!!!")
         location.href='index.html'
     }
 }
-
-    
-
 function cadastrarUsuario(){
     let nome = document.getElementById('criar-conta-nome').value;
     let email = document.getElementById('criar-conta-email').value;
@@ -43,6 +39,9 @@ function cadastrarUsuario(){
     localStorage.setItem("lista",JSON.stringify(usuarios))
     window.location.href='index.html'
 }
-function teste(){
-    console.log(contaLogada)
+function logout(){
+    localStorage.removeItem('contaLogada')
+    location.href='index.html'
 }
+var contaLogin = document.getElementById('conta-logada')
+contaLogin.innerHTML = `Olá ${localStorage.getItem('contaLogada')} seja bem vindo!!!`
