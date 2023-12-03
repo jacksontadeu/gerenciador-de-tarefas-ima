@@ -1,26 +1,48 @@
-let usuarios = []
 
+var contaLogada= ''
+function logar(){
+    var email = document.getElementById('login-email').value;
+    var senha = document.getElementById('login-password').value;
 
-function cadastrarUsuario(){
-    let nome = document.getElementById('criar-conta-nome')
-    let email = document.getElementById('criar-conta-email')
-    let senha = document.getElementById('criar-conta-password')
-
-    let usuario ={
-        "nome":nome.value,
-        "email":email.value,
-        "senha":senha.value
+    var lista= JSON.parse(localStorage.getItem('lista'))
+    var emailLogin =''
+    var senhaLogin =''
+    
+    for (let i = 0; i <lista.length; i++){
+        if(lista[i].email == email){
+            emailLogin = lista[i].email
+            senhaLogin = lista[i].senha
+            contaLogada = lista[i].nome
+        }
     }
     
-    usuarios.push(usuario)
-    
-    console.log(usuario)
-    console.log(usuarios)
+    if(email == emailLogin && senha == senhaLogin){
+        alert("Login com Sucesso")
+        teste()
+        location.href='adicionar_tarefas.html'
+    }else{
+        alert("Login inválido!!!")
+        location.href='index.html'
+    }
 }
 
-function listarUsuarios(usuarios){
-    for(let u of usuarios){
-        console.log(u)
-    }
+    
 
+function cadastrarUsuario(){
+    let nome = document.getElementById('criar-conta-nome').value;
+    let email = document.getElementById('criar-conta-email').value;
+    let senha = document.getElementById('criar-conta-password').value;
+
+    let usuario = {
+        "nome": nome,
+        "email": email,
+        "senha": senha
+    }
+    var usuarios = JSON.parse(localStorage.getItem('lista') || '[]');
+    usuarios.push(usuario);
+    localStorage.setItem("lista",JSON.stringify(usuarios))
+    window.location.href='index.html'
+}
+function teste(){
+    console.log(contaLogada)
 }

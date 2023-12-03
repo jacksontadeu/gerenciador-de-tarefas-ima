@@ -16,13 +16,13 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <title>Gerenciador de Tarefas</title>
+    <title>Cadastro de Tarefas</title>
   </head>
   <body>
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <a >Gerenciador de Tarefas</a>
-        <a >Bom dia 77777 </a>
+        <a >Olá ${contaLogada}  </a>
       </div>
     </nav>
     <span class="container-conteudo">
@@ -76,8 +76,9 @@
             placeholder="Descrição"
           ></textarea>
         </div>
-        <button type="button" class="btn btn-primary">Criar Tarefa</button>
+        <button type="submit" class="btn btn-primary" onclick="teste()">Criar Tarefa</button>
       </div>
     </span>
+    <script src="scripts.js"></script>
   </body>
 </html>
